@@ -1,3 +1,4 @@
+#Drone Pipeline for test
 kind: pipeline
 type: ssh
 name: default
@@ -8,7 +9,6 @@ server:
   user: Suvarna
   password:
     from_secret: ssh_password
-
 
 steps:
 - name: greeting
