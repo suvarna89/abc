@@ -1,15 +1,16 @@
 kind: pipeline
 type: ssh
 name: default
+
+
 server:
-host: 40.86.87.22
-user: Suvarna
-password:
-from_secret: ssh_password
+  host: 40.86.87.22
+  user: Suvarna
+  password:
+    from_secret: ssh_password
+
+
 steps:
-- maven:
-goals: clean install
-pom-file: cd myapp
-after:
-- artifacts:
-include: "/home/Suvarna/java-poc-master/target/*"
+- name: greeting
+  commands:
+  - "echo hello world"
